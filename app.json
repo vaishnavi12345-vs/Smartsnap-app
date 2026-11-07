@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "SmartSnap",
+    "slug": "smartsnap-app",
+    "scheme": "smartsnap",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "SmartSnap needs access to your photos so you can edit and organize them.",
+          "cameraPermission": "SmartSnap uses your camera to capture photographs.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "SmartSnap uses your camera to capture photographs.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "SmartSnap saves your finished photographs to your library.",
+          "savePhotosPermission": "SmartSnap saves your finished photographs to your library.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.smartsnap.app",
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.smartsnap.app",
+      "supportsTablet": true
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
